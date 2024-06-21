@@ -1,9 +1,19 @@
-<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-    <app-card 
-        *ngFor="let album of albums"
-        [title]="album.title"
-        [description]="album.viewCount | viewCount"
-        [image]="album.thumbnail"
-        [tooltipMessage]="album.title"
-    />
+<div>
+    <div *ngIf="albums$ | async as albums">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <app-card 
+                *ngFor="let album of albums"
+                [title]="album.title"
+                [description]="album.viewCount | viewCount"
+                [image]="album.thumbnail"
+                [tooltipMessage]="album.title"
+            />
+        </div>
+    </div>
+    <div *ngIf="loading$ | async as loading">
+        <p>Is loading: {{loading}}</p>
+    </div>
+    <div *ngIf="error$ | async as error">
+        <p>{{error}}</p>
+    </div>
 </div>
