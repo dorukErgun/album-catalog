@@ -4,7 +4,13 @@ module.exports = {
     "./src/app/**/*.{html,ts}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'cl-primary': '#ff9900',
+        'cl-dark': '#181818',
+        'cl-gray': '#454545',
+      },
+    },
   },
   plugins: [],
 }
