@@ -1,4 +1,5 @@
-<header class=" text-white p-4 flex justify-between items-center">
+<header class="p-4 flex justify-center items-center">
+  <div class="text-white flex justify-between items-center flex-1 max-w-screen-lg">
     <div class="text-xl">
         <a [routerLink]="'/'">AIQX Music Catalog</a>
     </div>
@@ -8,4 +9,5 @@
         <li><a [routerLink]="'/about'" [ngClass]="{'text-cl-primary': isCurrentRoute('/about'), 'hover:text-cl-primary/50': true, 'transition-colors': true}">About</a></li>
       </ul>
     </nav>
+  </div>
 </header>
