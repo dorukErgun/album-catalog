@@ -1,1 +1,71 @@
-<p class="">about works!</p>
+<div>
+    <h1>
+        About AIQX Music Catalog App
+    </h1>
+    <main class="container mx-auto">
+        <section id="objective" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Objective</h2>
+            <p>Develop an Angular application that presents a visually appealing music album catalog.</p>
+        </section>
+
+        <section id="functional-requirements" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Functional Requirements</h2>
+            <h3 class="text-xl font-semibold mb-2">Album Display</h3>
+            <ul class="list-disc pl-5 mb-4">
+                <li>Present albums as cards with hover tooltips displaying the album name.</li>
+                <li>Clicking an album card navigates to a dedicated album details page.</li>
+            </ul>
+            <h3 class="text-xl font-semibold mb-2">Header Menu</h3>
+            <ul class="list-disc pl-5">
+                <li>Implement a header menu with two options: "Home" and "About."</li>
+                <li>"Home" displays the album catalog.</li>
+                <li>"About" provides information about the application.</li>
+            </ul>
+        </section>
+
+        <section id="data-consumption" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Data Consumption (albums.json)</h2>
+            <p>Consume album data from a local albums.json file which can be created with random data.</p>
+            <h3 class="text-xl font-semibold mb-2">Required album fields:</h3>
+            <ul class="list-disc pl-5">
+                <li>title (string)</li>
+                <li>viewCount (number)</li>
+                <li>thumbnail (string) - Utilize the image placeholder service for dynamic image generation (<a href="https://dev.me/products/image-placeholder" target="_blank" class="text-blue-500 underline">https://dev.me/products/image-placeholder</a>).</li>
+                <li>imageUrl (string) - Utilize the image placeholder service for dynamic image generation (<a href="https://dev.me/products/image-placeholder" target="_blank" class="text-blue-500 underline">https://dev.me/products/image-placeholder</a>).</li>
+            </ul>
+        </section>
+
+        <section id="album-details-view" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Album Details View</h2>
+            <ul class="list-disc pl-5">
+                <li>Display detailed information about the selected album.</li>
+                <li>Present viewCount in a summarized format (e.g., 1K, 1M, 1B, 1T, etc.).</li>
+            </ul>
+        </section>
+
+        <section id="technical-requirements" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Technical Requirements</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>CSS Framework:</strong> Choose a CSS framework (e.g., Material, Tailwind CSS) to ensure a responsive layout.</li>
+                <li><strong>State Management:</strong> Implement NgRx for state management to manage application state efficiently.</li>
+                <li><strong>Unit Testing:</strong> Write unit tests using Jest to ensure code quality and robustness.</li>
+                <li><strong>Custom Components:</strong> Create custom pipes (e.g., for view count formatting), directives, and Angular routes.</li>
+                <li><strong>UI/UX:</strong> Prioritize a clean, user-friendly interface with good design principles.</li>
+                <li><strong>Organization:</strong> Structure the project code in a well-organized and maintainable manner.</li>
+            </ul>
+        </section>
+
+        <section id="evaluation-criteria" class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Evaluation Criteria</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>NgRx for State Management:</strong> 10 points</li>
+                <li><strong>Unit Tests Using Jest:</strong> 8 points</li>
+                <li><strong>Pipes & Directives & Routes:</strong> 7 points</li>
+                <li><strong>UI/UX:</strong> 5 points</li>
+                <li><strong>Application Organization:</strong> 5 points</li>
+            </ul>
+            <p>Submit your completed Angular project, including the albums.json file and any relevant documentation using git.</p>
+            <p>Feel free to ask clarifying questions during the interview.</p>
+        </section>
+    </main>
+</div>
