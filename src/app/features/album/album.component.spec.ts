@@ -26,4 +26,9 @@ describe('AlbumComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have songs', () => {
+     expect(component.songs).toBeDefined();
+  });
+
 });
