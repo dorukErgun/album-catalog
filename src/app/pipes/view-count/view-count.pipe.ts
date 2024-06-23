@@ -7,7 +7,7 @@ export class ViewCountPipe implements PipeTransform {
 
   transform(value: number): string {
     if (value >= 1000000000000) {
-      return (value / 1000000000000).toFixed(1) + 'T';
+      return '1B+';
     }
     if (value >= 1000000000) {
       return (value / 1000000000).toFixed(1) + 'B';
@@ -20,5 +20,5 @@ export class ViewCountPipe implements PipeTransform {
     }
     return value.toString();
   }
-
+  
 }

@@ -45,9 +45,30 @@
         {
             "id": 7,
             "title": "Yeezus",
-            "viewCount": 9234234,
+            "viewCount": 533333333,
             "thumbnail": "https://via.assets.so/album.png?id=7&q=95&w=960&h=960&fit=fill",
             "imageUrl": "https://via.assets.so/album.png?id=7&q=95&w=960&h=960&fit=fill"
+        },
+        {
+            "id": 8,
+            "title": "Watch The Throne (Deluxe)",
+            "viewCount": 4252,
+            "thumbnail": "https://via.assets.so/album.png?id=8&q=95&w=960&h=960&fit=fill",
+            "imageUrl": "https://via.assets.so/album.png?id=8&q=95&w=960&h=960&fit=fill"
+        },
+        {
+            "id": 9,
+            "title": "Watch The Throne",
+            "viewCount": 3222,
+            "thumbnail": "https://via.assets.so/album.png?id=9&q=95&w=960&h=960&fit=fill",
+            "imageUrl": "https://via.assets.so/album.png?id=9&q=95&w=960&h=960&fit=fill"
+        },
+        {
+            "id": 10,
+            "title": "MBDTF",
+            "viewCount": 2,
+            "thumbnail": "https://via.assets.so/album.png?id=10&q=95&w=960&h=960&fit=fill",
+            "imageUrl": "https://via.assets.so/album.png?id=10&q=95&w=960&h=960&fit=fill"
         }
     ]
 }

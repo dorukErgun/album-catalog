@@ -33,14 +33,10 @@ export class AlbumEffects {
       mergeMap((action) =>
         this.http.get<{ albums: Album[] }>(`assets/albums.json`).pipe(
           map((data) => {
-            console.log("[Try]", data, action.id);
             const album = data.albums.find((a) => a.id === action.id);
-            console.log("[Found]", album);
             if (album) {
-              console.log("Success");
               return AlbumActions.loadAlbumSuccess({ album });
             } else {
-              console.log("Error");
               return AlbumActions.loadAlbumFailure({ error: 'Album not found' });
             }
           }),

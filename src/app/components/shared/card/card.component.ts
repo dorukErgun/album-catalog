@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  @Input() route: string | any[] | null | undefined;
   @Input() image: string | undefined = "";
   @Input() title: string | undefined = "";
   @Input() description: string | undefined = "";

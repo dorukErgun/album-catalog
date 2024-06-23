@@ -1,4 +1,9 @@
-<div *ngIf="!loading" matTooltip="{{tooltipMessage}}" class="border border-cl-mid rounded-xl p-4 pb-0 flex flex-col hover:bg-cl-mid transition-colors hover:cursor-pointer">
+<a 
+    *ngIf="!loading" 
+    [routerLink]="route"
+    matTooltip="{{tooltipMessage}}" 
+    class="border border-cl-mid rounded-xl p-4 pb-0 flex flex-col hover:bg-cl-mid transition-colors hover:cursor-pointer"
+>
     <div class="relative overflow-hidden rounded-lg">
         <img 
             src="{{image}}" 
@@ -8,7 +13,7 @@
     </div>
     <p class="font-semibold pt-2">{{title}}</p>
     <p class="text-gray-400 text-sm">{{description}}</p>
-</div>
+</a>
 
 <div *ngIf="loading" class="border border-cl-mid rounded-xl p-4 flex flex-col hover:bg-cl-mid transition-colors hover:cursor-pointer">
     <div class="object-cover animate-pulse bg-cl-mid  aspect-square rounded-lg mb-2"></div>

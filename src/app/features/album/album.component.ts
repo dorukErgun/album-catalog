@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Album } from 'src/app/models/album';
 import { loadAlbum } from 'src/app/store/actions/album.action';
 import { selectAlbumsError, selectAlbumsLoading, selectSelectedAlbum } from 'src/app/store/selectors/album.selector';
+import { ALBUM_CONSTS } from './album.const';
 
 @Component({
   selector: 'app-album',
@@ -12,6 +13,7 @@ import { selectAlbumsError, selectAlbumsLoading, selectSelectedAlbum } from 'src
   styleUrls: ['./album.component.css']
 })
 export class AlbumComponent {
+  songs = ALBUM_CONSTS.SONGS;
   album$: Observable<Album | null>;
   loading$: Observable<boolean>;
   error$: Observable<string | null>;
@@ -24,7 +26,6 @@ export class AlbumComponent {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log('id', id)
     this.store.dispatch(loadAlbum({ id }));
   }
 }

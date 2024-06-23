@@ -1,5 +1,77 @@
 <div>
+    <!-- Information Loading  -->
+    <div *ngIf="loading$ | async as loading">
+        <a [routerLink]="'/'" class="text-xl hover:text-cl-primary">&lsaquo; Back</a>
+        <div class="flex gap-4 pt-4">
+            <div class="max-w-52">
+                <app-skeleton [height]="'208px'" [width]="'208px'"></app-skeleton>
+            </div>
+            <div class="flex flex-col justify-end gap-3">
+                <app-skeleton [height]="'60px'" [width]="'300px'"></app-skeleton>
+                <app-skeleton [height]="'20px'" [width]="'150px'"></app-skeleton>
+            </div>
+        </div>
+        <div class="pt-4">
+            <div 
+                *ngFor="let song of songs"
+                class="flex items-center justify-between border-b border-gray-400 p-2"
+            >
+                <div class="flex gap-3 items-center pt-2">
+                    <app-skeleton [height]="'48px'" [width]="'150px'"></app-skeleton>
+                </div>
+                <div>
+                    <app-skeleton [height]="'28px'" [width]="'50px'"></app-skeleton>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Album Information Loaded Succesfully -->
     <div *ngIf="album$ | async as album">
-        {{album.title}}
+        <a [routerLink]="'/'" class="text-xl hover:text-cl-primary">&lsaquo; Back</a>
+        <div class="flex gap-4 pt-4">
+            <div class="max-w-52">
+                <img 
+                    src="{{album.thumbnail}}" 
+                    class="rounded-lg object-fill" 
+                    alt="{{album.title}}"
+                >
+            </div>
+            <div class="flex flex-col justify-end">
+                <p class="font-bold text-4xl md:text-6xl">{{album.title}}</p>
+                <p class="text-cl-primary">{{album.viewCount | viewCount}} times viewed</p>
+            </div>
+        </div>
+        <div class="pt-4">
+            <div 
+                *ngFor="let song of songs"
+                class="flex items-center justify-between border-b border-gray-400 p-2"
+            >
+                <div class="flex gap-3 items-center pt-2">
+                    <p class="text-xl text-gray-400">{{song.id}}</p>
+                    <p class="text-xl">{{song.title}}</p>
+                </div>
+                <div>
+                    <p class="text-xl text-gray-400 pt-2">
+                        {{song.duration}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- There was an error loading the information -->
+    <div *ngIf="error$ | async as error">
+        <div class="flex flex-col justify-center items-center pt-40">
+            <p class="text-8xl">
+                😢
+            </p>
+            <p class="text-3xl font-semibold">
+                Ooops! Something went wrong.
+            </p>
+            <p class="text-md text-gray-400">
+                The album you are looking for could not be found.
+            </p>
+        </div>
     </div>
 </div>
