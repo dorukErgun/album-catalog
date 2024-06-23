@@ -6,8 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  @Input() image: string = "";
-  @Input() title: string = "";
-  @Input() description: string = "";
-  @Input() tooltipMessage: string = "";
+  @Input() image: string | undefined = "";
+  @Input() title: string | undefined = "";
+  @Input() description: string | undefined = "";
+  @Input() tooltipMessage: string | undefined = "";
+  @Input() loading: boolean = false;
 }
