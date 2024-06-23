@@ -6,6 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ViewCountPipe implements PipeTransform {
 
   transform(value: number): string {
+    if (value < 0) {
+      return '1';
+    }
+
     if (value >= 1000000000000) {
       return '1B+';
     }
