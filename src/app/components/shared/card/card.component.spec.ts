@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -8,7 +10,11 @@ describe('CardComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CardComponent]
+      declarations: [CardComponent],
+      imports: [
+        MatTooltipModule,
+        RouterTestingModule
+      ]
     });
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
