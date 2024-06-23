@@ -12,6 +12,7 @@ import { selectAlbumsError, selectAlbumsLoading, selectAllAlbums } from 'src/app
 })
 export class HomeComponent {
 
+    skeletons = [...Array(6).keys()];
     albums$: Observable<Album[]>;
     loading$: Observable<boolean>;
     error$: Observable<string | null>;
@@ -23,7 +24,6 @@ export class HomeComponent {
     }
   
     ngOnInit() {
-        console.log("this.albums$",this.albums$, this.loading$, this.error$);
       this.store.dispatch(loadAlbums());
     }
 }

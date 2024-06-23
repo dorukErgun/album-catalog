@@ -3,6 +3,7 @@
         <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <app-card 
                 *ngFor="let album of albums"
+                [route]="['/album', album.id]"
                 [title]="album.title"
                 [description]="album.viewCount | viewCount"
                 [image]="album.thumbnail"
@@ -11,7 +12,12 @@
         </div>
     </div>
     <div *ngIf="loading$ | async as loading">
-        <p>Is loading: {{loading}}</p>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <app-card 
+                *ngFor="let skeleton of skeletons"
+                [loading]="true"
+            />
+        </div>
     </div>
     <div *ngIf="error$ | async as error">
         <p>{{error}}</p>
