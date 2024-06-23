@@ -18,7 +18,6 @@ export class ViewCountPipe implements PipeTransform {
     if (value >= 1000) {
       return (value / 1000).toFixed(1) + 'K';
     }
-    console.log(value)
     return value.toString();
   }
 

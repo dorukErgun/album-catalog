@@ -23,7 +23,6 @@ export class HomeComponent {
     }
   
     ngOnInit() {
-        console.log("this.albums$",this.albums$, this.loading$, this.error$);
       this.store.dispatch(loadAlbums());
     }
 }
