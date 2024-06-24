@@ -12,7 +12,7 @@ import { selectAlbumsError, selectAlbumsLoading, selectAllAlbums } from 'src/app
 })
 export class HomeComponent {
 
-    skeletons = [...Array(6).keys()];
+    skeletons = [...Array(12).keys()];
     albums$: Observable<Album[]>;
     loading$: Observable<boolean>;
     error$: Observable<string | null>;

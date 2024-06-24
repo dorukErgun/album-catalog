@@ -1,4 +1,16 @@
 <div>
+
+    <!-- Loading information -->
+    <div *ngIf="loading$ | async as loading">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <app-card 
+                *ngFor="let skeleton of skeletons"
+                [loading]="true"
+            />
+        </div>
+    </div>
+
+    <!-- Succesfully loaded the data -->
     <div *ngIf="albums$ | async as albums">
         <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <app-card 
@@ -11,15 +23,19 @@
             />
         </div>
     </div>
-    <div *ngIf="loading$ | async as loading">
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <app-card 
-                *ngFor="let skeleton of skeletons"
-                [loading]="true"
-            />
-        </div>
-    </div>
+
+    <!-- There was an error loading the information -->
     <div *ngIf="error$ | async as error">
-        <p>{{error}}</p>
+        <div class="flex flex-col justify-center items-center pt-40">
+            <p class="text-8xl">
+                😢
+            </p>
+            <p class="text-3xl font-semibold">
+                Ooops! Something went wrong.
+            </p>
+            <p class="text-md text-gray-400">
+                Please try again later
+            </p>
+        </div>
     </div>
 </div>
